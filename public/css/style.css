@@ -1,0 +1,223 @@
+body {
+    background-color: #fefefb;
+    letter-spacing: 0.1em;
+}
+
+a {
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+h3 a {
+    color: #222;
+}
+
+footer {
+    background-color: #222;
+}
+
+.top-buffer {
+    margin-top: 6em;
+}
+
+.quote-buffer {
+    margin-top: 3em;
+}
+
+.contact-message {
+    height: 150px;
+    width: 300px;
+}
+
+
+/*Navigation Bar Styling*/
+
+.navbar {
+    font-weight: bold;
+}
+
+.navbar-position {
+    position: fixed;
+    bottom: 0px !important;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu>li>a,
+.navbar-default .navbar-nav .open .dropdown-menu {
+    background-color: #222;
+    color: #ffffff;
+}
+
+
+/*Jumbotron Styling*/
+
+.jumbotron {
+    background-image: url(../images/background-large.jpg);
+    margin-top: 5em;
+    margin-bottom: 5em;
+    background-size: cover;
+    height: 100%;
+}
+
+.jumbotron p {
+    color: #ffffff;
+}
+
+
+/*Featured Work Styling*/
+
+.featured-work-title {
+    font-size: 3em;
+}
+
+.featured-work-block {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    text-align: center;
+}
+
+
+/*Vision Page*/
+
+.vision {
+    font-size: 1.5em;
+}
+
+
+/* Featured Image Styling*/
+
+i.project-image {
+    padding-bottom: 0.05em;
+    font-size: 10em;
+    text-align: center;
+    color: #222;
+}
+
+
+/*Featured Work Image Caption Styling*/
+
+.legend {
+    margin: 2px;
+    text-align: center;
+    width: 100%;
+    border-bottom: none;
+    font-size: 1.3em;
+}
+
+
+/*Footer Styling*/
+
+.footer-text {
+    margin: 20px 0;
+    color: #ffffff;
+    font-size: 4vw;
+    text-align: center;
+}
+
+
+/* Contact Us Form Styling */
+
+.form-buffer {
+    margin-top: 15em;
+}
+
+.button-buffer {
+    margin-top: 3em;
+}
+
+
+/*Media Queries*/
+
+@media(min-width: 768px) {
+    header h1,
+    header h3 {
+        text-align: right !important;
+    }
+    .footer-text {
+        text-align: right;
+        font-size: 1.2em;
+    }
+}
+
+@media(min-width: 990px) {
+    i.project-image {
+        font-size: 10vw;
+    }
+}
+
+.loader,
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+}
+
+.loader:before,
+.loader:after {
+    position: absolute;
+    content: '';
+}
+
+.loader:before {
+    width: 5.2em;
+    height: 10.2em;
+    background: #000000;
+    border-radius: 10.2em 0 0 10.2em;
+    top: -0.1em;
+    left: -0.1em;
+    -webkit-transform-origin: 5.2em 5.1em;
+    transform-origin: 5.2em 5.1em;
+    -webkit-animation: load2 2s infinite ease 1.5s;
+    animation: load2 2s infinite ease 1.5s;
+}
+
+.loader {
+    color: #ffffff;
+    font-size: 11px;
+    text-indent: -99999em;
+    margin: 55px auto;
+    position: relative;
+    width: 10em;
+    height: 10em;
+    box-shadow: inset 0 0 0 1em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.loader:after {
+    width: 5.2em;
+    height: 10.2em;
+    background: #000000;
+    border-radius: 0 10.2em 10.2em 0;
+    top: -0.1em;
+    left: 5.1em;
+    -webkit-transform-origin: 0px 5.1em;
+    transform-origin: 0px 5.1em;
+    -webkit-animation: load2 2s infinite ease;
+    animation: load2 2s infinite ease;
+}
+
+@-webkit-keyframes load2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+#projects-section {
+    @include mui-animtation(fade);
+}

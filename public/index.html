@@ -1,0 +1,76 @@
+<!doctype html>
+<html ng-app="portfolio">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.scss">
+    <title>Shamyle Ghazali's Portfolio</title>
+</head>
+
+<body ng-controller="portfolioCtrl as portfolio">
+    <div ng-include="portfolio.navTemplate.url"></div>
+    <div class="container">
+        <!-- The Logo and Title -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2"><img class="img-responsive" src="images/logo.png" alt="udacity logo"></div>
+                    <div class="col-sm-10">
+                        <h1 class="text-center">SHAMYLE GHAZALI </h1>
+                        <h3 class="text-center">FRONT-END AFICIONADO</h3>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About Me -->
+        <section class="jumbotron">
+            <div class=" container">
+                <p class="text-center">An aspiring front end web developer with the desire to create beautiful, responsive websites.</p>
+            </div>
+        </section>
+        <!-- Featured Work -->
+        <section class="featured-work-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 text-center">
+                        <h1 class="featured-work-title">Featured Work</h1></div>
+                </div>
+            </div>
+            <div class="container" id="projects-section">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4 col-lg-4 featured-work-block">
+                        <a href="#"><i class="img-responsive project-image fa fa-briefcase"></i></a>
+                        <h3 class="legend"><a href="#">Personal Resume</a></h3>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-lg-4 featured-work-block">
+                        <a href="#">
+                            <i class="img-responsive project-image center-block fa fa-gamepad"></i>
+                        </a>
+                        <h3 class="legend"><a href="#">Classic Arcade Game Clone</a></h3>
+                    </div>
+                    <div data-animation="scale-in-up" class="slow ease col-xs-12 col-md-4 col-lg-4 featured-work-block">
+                        <a href="#">
+                            <i class=" img-responsive project-image center-block fa fa-map-marker"></i>
+                        </a>
+                        <h3 class="legend"><a href="#">Neighborhood Map Project</a></h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer -->
+    <div ng-include="portfolio.footerTemplate.url"></div>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script></script>
+    <script src="js/script.js"></script>
+    <script src="js/motion-ui.js"></script>
+</body>
+
+</html>

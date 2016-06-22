@@ -1,0 +1,91 @@
+</!DOCTYPE html>
+<html ng-app="portfolio">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact Me</title>
+</head>
+
+<body>
+    <div ng-controller="portfolioCtrl as portfolio">
+        <div ng-include="portfolio.navTemplate.url"></div>
+        <div class="container">
+            <div>
+                <h1 class="col-xs-12 text-center">Contact Me</h1>
+                <h3 class="col-xs-12 text-center"> (I do not spam) </h3>
+            </div>
+            <div ng-controller="formCtrl as form">
+                <div class="well">
+                    <form name="contactForm" novalidate>
+                        <div class="row text-center form-buffer">
+                            <div class="col-xs-4">
+                                <label class="pull-right" for="firstName">Name:</label>
+                            </div>
+                            <div class="col-xs-4">
+                                <input name="name" type="text" ng-model="form.name" ng-min="1">
+                                <span style="color:red" ng-show="contactForm.name.$pristine
+ && contactForm.name.$touched">Need a name for you, Sir/Madam!</span>
+                            </div>
+                        </div>
+                        <div class="row text-center top-buffer">
+                            <div class="col-xs-4">
+                                <label class="pull-right" for="email">Email:</label>
+                            </div>
+                            <div class="col-xs-4">
+                                <input name="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" type="email" ng-model="form.emailAddress">
+                                <span style="color:red" ng-show="!contactForm.email.$pristine && contactForm.email.$error.pattern">Valid email address is required.</span>
+                            </div>
+                        </div>
+                        <div class="row text-center top-buffer">
+                            <div class="col-xs-4">
+                                <label class="pull-right
+" for="message">Message:</label>
+                            </div>
+                            <div class="col-xs-4">
+                                <textarea name="message" class="contact-message" type="text" ng-model="form.message">
+                                </textarea>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="col-xs-12 text-center">
+                        <button class="btn btn-primary button-buffer" data-toggle="modal" data-target="#confirmationModal">Submit</button>
+                    </div>
+                </div>
+                <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header" ng-hide="form.hasSubmitted">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="modalLabel">Confirm Form Submission</h4>
+                            </div>
+                            <div class="modal-body">
+                                <h3>Are you sure you wish to submit your form?</h3>
+                            </div>
+                            <div class="row modal-footer">
+                                <div class="col-xs-12 text-center">
+                                    <button type="button" data-dismiss="modal" ng-click="form.submitContactForm()" class="btn btn-success">Yes</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                </div>
+                            </div>
+                            <div class="loader" ng-show="form.hasSubmitted">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-include="portfolio.footerTemplate.url"></div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/controllers/contact.js"></script>
+</body>
+
+</html>

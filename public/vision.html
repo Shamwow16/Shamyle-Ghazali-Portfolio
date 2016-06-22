@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="portfolio">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>My Vision</title>
+</head>
+
+<body ng-controller="portfolioCtrl as portfolio">
+    <!--Navigation -->
+    <div ng-include="portfolio.navTemplate.url"></div>
+    <!--Content -->
+    <div class="container">
+        <div class="col-xs-12 text-center">
+            <h1>My Vision</h1>
+            <p class="quote-buffer">A coat of gold, a coat of red.
+                <br> A lion still has claws.
+                <br> And mine are long and sharp, my Lord.
+                <br> As long and sharp as yours.</p>
+        </div>
+        <div class="vision top-buffer col-xs-12 text-center">
+            <p>I came to the New World at age 18, having spent my childhood and teenage years in Pakistan. The New World stunned me. The pace at which civilization has progressed in the United States of America lit an inner flame within me, and I realized my calling. The first online order I placed on Grubhub got me thinking how my homeland was left out of the technological age, and how beneficial it would be for the world to know about Pakistani cuisine and culture. With thousands of restaurants and services established by people with a passion for food and hospitality, my hometown Lahore alone has a lot to show to the rest of the world. I aspire to help Pakistani entrepreneurs take advantage of the Internet to enhance their business operations and spread the name of their fine establishments around the globe. From the roadside vendor selling samosas to the fine-dining restaurateur in the poshest neighborhood of Lahore, my goal is to show Pakistan to the world. Through food and culture - the most civilized concepts our world has known.</p>
+        </div>
+        <div class="col-xs-12 text-center">
+            <a href="contact.html" class="top-buffer btn btn-primary">Contact Me</a>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div ng-include="portfolio.footerTemplate.url"></div>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
