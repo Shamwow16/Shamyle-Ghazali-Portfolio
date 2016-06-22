@@ -28,7 +28,7 @@
             vm.data.emailAddress = vm.emailAddress;
             vm.data.message = vm.message;
 
-            $http.post("/submit", vm.data).success(function(data, status) {
+            $http.get("/submit", vm.data).success(function(data, status) {
                 console.log(data);
             }).error(function(response) {
                 console.log(response);

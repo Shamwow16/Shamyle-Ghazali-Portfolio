@@ -35,7 +35,7 @@ app.use(express.static(__dirname + '/public'));
 
 var smtpTransport = nodemailer.createTransport('smtps://shamyleg%40gmail.com:ghazartley1!@smtp.gmail.com');
 
-app.post('/submit', function(req, res) {
+app.get('/submit', function(req, res) {
     var mailOptions = {
         message: req.body.message,
         from: req.body.emailAddress,
